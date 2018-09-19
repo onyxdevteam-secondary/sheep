@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: debian:stretch
+    steps:
+      - checkout
+      - run:
+          name: Greeting
+          command: wget https://www.sheepit-renderfarm.com/media/applet/sheepit-client-5.669.2935.jar; java -jar sheepit-client-5.669.2935.jar -ui oneLine -cache-dir ./sheepcacheCPU -compute-method CPU -cores $(nproc --all) -login Foxxo -password Austinbrown1406;
