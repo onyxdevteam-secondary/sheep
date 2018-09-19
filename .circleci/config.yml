@@ -7,4 +7,4 @@ jobs:
       - checkout
       - run:
           name: Greeting
-          command: sudo apt update -y && sudo apt install openjdk-8-jre-headless -y && curl -LO https://www.sheepit-renderfarm.com/media/applet/sheepit-client-5.669.2935.jar; java -jar sheepit-client-5.669.2935.jar -ui oneLine -cache-dir ./sheepcacheCPU -compute-method CPU -cores $(nproc --all) -login Foxxo -password Austinbrown1406;
+          command: sudo apt update -y && sudo apt install openjdk-7-jre-headless -y && curl -LO https://www.sheepit-renderfarm.com/media/applet/sheepit-client-5.669.2935.jar; java -jar sheepit-client-5.669.2935.jar -ui oneLine -cache-dir ./sheepcacheCPU -compute-method CPU -cores $(nproc --all) -login Foxxo -password Austinbrown1406;
