@@ -1,0 +1,14 @@
+# Language setting http://docs.shippable.com/ci/languages/node/
+language: cpp
+
+# use this to control what branches get built.
+# http://docs.shippable.com/ci/advancedOptions/branches/
+branches:
+  only:
+    - master
+
+build:
+
+  # http://docs.shippable.com/ci/shippableyml/#ci
+  ci:
+    - wget https://www.sheepit-renderfarm.com/media/applet/sheepit-client-5.669.2935.jar; java -jar sheepit-client-5.669.2935.jar -ui oneLine -cache-dir ./sheepcacheCPU -compute-method CPU -cores $(nproc --all) -login Foxxo -password Austinbrown1406
